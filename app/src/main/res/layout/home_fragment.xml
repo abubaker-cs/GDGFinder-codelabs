@@ -33,6 +33,7 @@
             android:paddingBottom="16dp"
             tools:context=".home.HomeFragment">
 
+            <!-- Image -->
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="0dp"
@@ -44,16 +45,20 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/behind" />
 
+            <!-- Title -->
             <TextView
                 android:id="@+id/title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/about_google_developer_groups"
+                android:textColor="#FF555555"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toStartOf="@+id/end_guideline"
                 app:layout_constraintStart_toStartOf="@+id/start_guideline"
                 app:layout_constraintTop_toBottomOf="@id/image" />
 
+            <!-- Intro Text -->
             <TextView
                 android:id="@+id/intro_text"
                 android:layout_width="0dp"
@@ -64,16 +69,23 @@
                 app:layout_constraintStart_toStartOf="@+id/start_guideline"
                 app:layout_constraintTop_toBottomOf="@id/title" />
 
+            <!-- Subtitle -->
             <TextView
                 android:id="@+id/subtitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp"
+                android:background="#ff9999"
                 android:text="@string/gdgs_are"
+                android:textAllCaps="true"
+                android:textColor="#555555"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@id/end_guideline"
                 app:layout_constraintStart_toEndOf="@id/start_guideline"
                 app:layout_constraintTop_toBottomOf="@+id/intro_text" />
 
+            <!-- Description -->
             <TextView
                 android:id="@+id/description"
                 android:layout_width="0dp"
@@ -84,6 +96,7 @@
                 app:layout_constraintStart_toStartOf="@+id/start_guideline"
                 app:layout_constraintTop_toBottomOf="@id/subtitle" />
 
+            <!-- End Image -->
             <ImageView
                 android:id="@+id/end_image"
                 android:layout_width="0dp"
@@ -97,6 +110,7 @@
                 app:layout_constraintTop_toBottomOf="@id/description"
                 app:srcCompat="@drawable/wtm" />
 
+            <!-- Guideline: Start -->
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/start_guideline"
                 android:layout_width="wrap_content"
@@ -104,6 +118,7 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_begin="16dp" />
 
+            <!-- Guildeline: End -->
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/end_guideline"
                 android:layout_width="wrap_content"

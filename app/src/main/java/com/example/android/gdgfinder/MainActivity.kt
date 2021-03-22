@@ -61,7 +61,6 @@ class MainActivity : AppCompatActivity() {
         // then setup the action bar, tell it about the DrawerLayout
         setupActionBarWithNavController(navController, binding.drawerLayout)
 
-
         // finally setup the left drawer (called a NavigationView)
         binding.navigationView.setupWithNavController(navController)
 

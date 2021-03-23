@@ -65,7 +65,7 @@
                 -->
                 <TextView
                     android:id="@+id/title"
-                    style="?attr/textAppearanceHeadline5"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -97,7 +97,7 @@
                 -->
                 <TextView
                     android:id="@+id/subtitle"
-                    style="?attr/textAppearanceHeadline6"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="13dp"

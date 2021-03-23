@@ -1,17 +1,17 @@
 package com.example.android.gdgfinder.add
 
+
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-
-
 import com.example.android.gdgfinder.R
 import com.example.android.gdgfinder.databinding.AddGdgFragmentBinding
 import com.google.android.material.snackbar.Snackbar
+
 /*
  * Copyright 2019, The Android Open Source Project
  *

@@ -27,6 +27,7 @@ class HomeViewModel : ViewModel() {
     val navigateToSearch: LiveData<Boolean>
         get() = _navigateToSearch
 
+    // For FAB Button
     fun onFabClicked() {
         _navigateToSearch.value = true
     }

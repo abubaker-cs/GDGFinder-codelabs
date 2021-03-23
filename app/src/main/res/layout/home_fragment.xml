@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="true"
-                android:paddingBottom="16dp"
+                android:paddingBottom="@dimen/spacing_normal"
                 tools:context=".home.HomeFragment">
 
                 <!-- Image -->
@@ -65,11 +65,11 @@
                 -->
                 <TextView
                     android:id="@+id/title"
-                    android:textAppearance="?attr/textAppearanceHeadline5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/spacing_normal"
                     android:text="@string/about_google_developer_groups"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
                     app:fontFamily="@font/lobster_two"
                     app:layout_constraintEnd_toStartOf="@+id/end_guideline"
                     app:layout_constraintStart_toStartOf="@+id/start_guideline"
@@ -97,12 +97,12 @@
                 -->
                 <TextView
                     android:id="@+id/subtitle"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="13dp"
                     android:text="@string/gdgs_are"
                     android:textAllCaps="true"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
                     android:textColor="#555555"
                     android:textStyle="bold"
                     app:fontFamily="@font/lobster_two"
@@ -126,7 +126,7 @@
                     android:id="@+id/end_image"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/spacing_normal"
                     android:scaleType="centerCrop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="3:1.5"
@@ -141,7 +141,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layout_constraintGuide_begin="16dp" />
+                    app:layout_constraintGuide_begin="@dimen/spacing_normal" />
 
                 <!-- Guildeline: End -->
                 <androidx.constraintlayout.widget.Guideline
@@ -149,7 +149,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layout_constraintGuide_end="26dp" />
+                    app:layout_constraintGuide_end="@dimen/spacing_normal" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
 
@@ -158,7 +158,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/spacing_normal"
             android:contentDescription="@string/fab_description"
             android:onClick="@{()-> viewModel.onFabClicked()}"
             app:srcCompat="@drawable/ic_gdg" />

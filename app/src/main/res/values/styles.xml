@@ -23,8 +23,11 @@
     <!--
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-    -->
+
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+    -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:fontFamily">@font/lobster_two</item>
         <item name="fontFamily">@font/lobster_two</item>
         <item name="colorAccent">@color/colorAccent</item>

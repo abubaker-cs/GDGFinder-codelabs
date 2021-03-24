@@ -78,6 +78,52 @@ class GdgListFragment : Fragment() {
             }
         })
 
+        viewModel.regionList.observe(viewLifecycleOwner, object : Observer<List<String>> {
+
+            // onChanged()
+            override fun onChanged(data: List<String>?) {
+                data ?: return
+
+                //  assign binding.regionList to a new variable called chipGroup to cache the regionList.
+                val chipGroup = binding.regionList
+
+                // creates a new layoutInflator for inflating chips from chipGroup.context.
+                val inflator = LayoutInflater.from(chipGroup.context)
+
+                // Create a variable, children, for holding all the chips.
+                // Assign it a mapping function on the passed in data to create and return each chip.
+                val children = data.map { regionName ->
+                    val chip = inflator.inflate(R.layout.region, chipGroup, false) as Chip
+                    chip.text = regionName
+                    chip.tag = regionName
+
+                    // Click listener:
+                    chip.setOnCheckedChangeListener { button, isChecked ->
+
+                        // When the chip is clicked, set its state to checked.
+                        viewModel.onFilterChanged(button.tag as String, isChecked)
+
+                    }
+
+                    //
+                    chip
+                }
+
+                /**
+                 * Issue: You can't update the chips,
+                 * so you have to remove and recreate the contents of the chipGroup
+                 */
+
+                // Removes all current views from the chipGroup,
+                chipGroup.removeAllViews()
+
+                // Then adds all the chips from children to the chipGroup
+                for (chip in children) {
+                    chipGroup.addView(chip)
+                }
+            }
+        })
+
         setHasOptionsMenu(true)
         return binding.root
     }

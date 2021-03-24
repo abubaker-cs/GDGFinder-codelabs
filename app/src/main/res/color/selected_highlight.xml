@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Color of colorPrimaryVariant, and constrain its use to when the selected state is true.
+        State lists are worked through from the top to the bottom, like a case statement.
+        If none of the states match, the default state applies.
+    -->
+    <item android:color="?attr/colorPrimaryVariant" android:state_selected="true" />
+
+    <!-- add an item with a default color colorOnSurface to the state list. -->
+    <item android:alpha="0.18" android:color="?attr/colorOnSurface" />
+</selector>
